@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Employee Details</title>
+<link rel="shortcut icon" href="images/download.ico">
+     
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap.min.css">
+ 
+   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script >
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/select/1.3.1/js/dataTables.select.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.0/js/dataTables.buttons.min.js"></script>
+  <script src="  https://code.jquery.com/jquery-3.3.1.js"></script>
+ <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+  
+  <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+ 
+ <script src = "http://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js" defer ></script>
+ 
+  <script src="/first.js"></script>
+   <script src="/second.js"></script>
+
+ 
+ 
+<style>
+*{
+    margin: 0px;
+    padding: 0px;
+     font-style: 	Times New Roman Georgia;
+
+     }
+     
+      
+.sidenav {
+  height: 100%;
+  width: 140px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to top, #ffffff 0%, #66ccff 100%);
+  background-attachment: fixed;
+
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #111;
+  padding: 20px;
+  display: inline-block;
+}
+.sidenav a:hover {
+  color: white;
+  font-size: 200%;
+}
+
+
+input[type=text], input[type=tel],  input[type=date]{
+  width: 30%;
+  padding: 12px;
+  border: none;
+  border-radius: 100px;
+  outline: none;
+  
+ 
+ 
+}
+ label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+input[type=text]:hover, input[type=tel]:hover, input[type=date]:hover{
+
+font-size: 100%;
+
+
+}
+button[type=submit] {
+  background: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  right: 20%;
+}
+button[type=reset]{
+background: grey;
+ color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  right: 20%;
+}
+
+
+
+
+.container {
+   margin-left: 160px;
+  padding: 20px;
+
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+ 
+
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+ .row:after {
+  content: "";
+  display: table;
+  clear: both;
+  }
+  .final {
+     text-align: center;
+     padding: 20px;
+  }
+  body {
+  
+  background: linear-gradient(to top, #ffffff 0%, #3399ff 100%);
+      background-attachment: fixed;
+  }
+ .example1 {
+ height: 50px;	
+ overflow: hidden;
+ position: relative;
+}
+.example1 h1{
+ font-size: 3em;
+ color: red;
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ margin: 0;
+ line-height: 50px;
+ text-align: center;
+ transform:translateX(100%);
+ animation: example1 15s linear infinite;
+}
+
+@keyframes example1 {
+ 0%   { 
+ transform: translateX(100%); 		
+ }
+ 100% { 
+ transform: translateX(-100%); 
+ }
+}
+.done{
+  width
+}
+
+
+.required{
+color: red;
+}
+.container{
+  <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+        
+	<title>Employee Details</title>
+}
+#resultdatadiv{
+ color: red;
+}
+</style>
+</head>
+<body>
+1
+
+<div class="sidenav">
+<div class="logo">
+ <img src="images/logo.png">
+</div>
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#clients">Clients</a>
+  <a href="#contact">Contact</a>
+</div>
+<div class="example1">
+     <h1 >Employee Details</h1>
+       </div>
+       <div id="resultdatadiv" align="center">
+    
+   </div>
+ <div id="room">    
+<form  onsubmit="return formValidation();" th:object="${dataPojo}" method="post" autocomplete="off">
+<div class="container">
+    <div class="row">
+       <div class="col-25">
+      <label for="ename">Name:</label>
+      <span class="required">*</span>
+    </div>
+    <div class="col-75">
+      <input type="text" id="name"  name="username" th:field="*{name}" placeholder=" Name.." required onkeypress="return  blockSpecialChar(event)"/>
+      <span id="usererror" class="text-danger"></span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="eage">DOB:</label>
+        <span class="required">*</span>
+    </div>
+    <div class="col-75">
+      <input type="text" id="date" name="userdate" th:field="*{date}" placeholder="Date Of Birth.."  />
+      <span id="dateerror" class="text-danger"></span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="enumber">Phone Number:</label>
+        <span class="required">*</span>
+    </div>
+    <div class="col-75">
+      <input type="tel" id="phonenumber" name="userpn"  th:field="*{phonenumber}"placeholder=" Phone  Number.." required onkeypress='return restrictAlphabets(event)'/>
+      <span id="phoneerror" class="text-danger"></span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="eadd">Address:</label>
+        <span class="required">*</span>
+    </div>
+    <div class="col-75">
+      <input type="text" name="subject" id="address" th:field="*{address}" placeholder=" Address.." required/>
+      <span id="addresserror" class="text-danger"></span>
+    </div>
+  </div>
+  <div class="row">
+     <div class="final">
+   <button type="submit" value="submit"  >Submit</button>
+     <button type="reset" value="clear">Clear</button>
+     </div>
+  </div>
+ </div>
+
+ </form>
+<br>
+  <div class="container">
+       <div class="come"></div>
+	<h3>Employee Details</h3>
+	<hr>
+	
+	<table id="Tableinformation" class="table table-striped table-bordered" style="width:100%">
+		<thead class="thead-dark">
+			<tr>
+			    <th>Id</th>
+				<th> Name</th>
+				<th>DOB</th>
+				<th>Phone Number</th>
+				<th>Address</th>
+			</tr>
+		</thead>
+		</table>
+		</div>
+	
+</div>
+ 
+</body>
+
+<script>
+
+function restrictAlphabets(e){
+	var x=e.which||e.keycode;
+	if((x>=48 && x<=57) || x==8 ||
+		(x>=35 && x<=40)|| x==46)
+		return true;
+	else
+		return false;
+}
+
+function blockSpecialChar(e) {
+    var k = e.keyCode;
+    return ((k > 64 && k < 91) || (k > 96 && k < 123) || k == 8 || k == 32);
+
+}
+
+$(function() {  
+    $("#date").datepicker({
+        dateFormat: 'yy-mm-dd',
+        changeMonth: true,
+        changeYear: true,
+        constrainInput: false
+    });
+});
+
+$(document).ready(
+	
+		
+      function ajaxGet(){
+    		 
+	      $.ajax({
+	     	 url:  "getData",
+	        	 type : "GET",
+	         	 success: function(result){
+		         	 if(result.status == "success"){
+				    var table=$("#Tableinformation").DataTable( {
+		          				'bProcessing': false,
+		          		        'bServerSide': false,
+		          		         'sAjaxSource': './getData',
+		          		        'bJQueryUI': true,
+		          		  	'aoColumns': [
+		        			               { 'mData': 'id'},
+		        		                   { 'mData': 'name' },
+		        				           { 'mData': 'date',type: 'dd-mmm-yyyy', targets: 0  },
+		        				         { 'mData': 'phonenumber' },
+		        				          { 'mData': 'address'},		 
+	        			]
+				  
+				      	 }); 
+				   
+				   
+		         	 } 	 
+		        else{
+		          $("#Tableinformation").html("<strong>Error</strong>");
+		          console.log("Fail: ", result);
+		        }
+		      },
+		      error : function(e) {
+		        $("#Tableinformation").html("<strong>Error</strong>");
+		        console.log("ERROR: ", e);
+		      }
+		
+	 })
+});
+
+
+</script>
+
+
+</html>
