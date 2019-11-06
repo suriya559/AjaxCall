@@ -1,0 +1,49 @@
+<html>
+<head>
+  <title>SignUp</title>
+           <link rel="shortcut icon" href="img/logo1.ico">
+           <link rel="stylesheet" href="signUp.css">
+           <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
+<script src="signupvalid.js"></script>
+</head>
+<body>
+<form name="can" method="post" action="login.html" onsubmit="return validateFun()">
+ <div class="container">
+
+      <div class="form-group">
+      <label for="username">UserName</label>
+      <input type="text" class="form-control" id="Username" name="name" placeholder="Enter Your Name">
+      <span id="usererror" class="text-danger" font-weight-"bold"></span>
+      </div>
+      
+      <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" class="form-control" id="Email" name="name" placeholder="Enter Your Email" required>
+       <span id="emailerror" class="text-danger" font-weight-"bold"></span>
+      </div>   
+     
+       <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" class="form-control" id="Password" name="password" placeholder="Enter password" required>
+       <span id="passworderror" class="text-danger" font-weight-"bold"></span>
+      </div>
+    
+       <div class="form-group">
+      <label for="re-password">Conform Password</label>
+      <input type="password" class="form-control" id="Re-password" name="password" placeholder="conform your password" required>
+       <span id="re-passworderror" class="text-danger" font-weight-"bold"></span>
+      </div>
+
+       <div class="form-group">
+      <label for="phonenumber">MobileNumber</label>
+      <input type="tel" class="form-control" id="phonenumber" name="phone" placeholder="Enter Your Number" required>
+       <span id="mobileerror" class="text-danger" font-weight-"bold"></span>
+      </div>
+
+      <button type="submit" class="btn btn-danger">Submit</button>
+<form>
+<body>
+<html>

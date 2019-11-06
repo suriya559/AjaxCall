@@ -1,0 +1,121 @@
+*
+{
+margin: 0;
+padding: 0;
+}
+#nav-bar
+{
+position: sticky;
+top: 0;
+z-index: 10;
+}
+.navbar-brand img
+{
+height:  40px;
+padding-left: 30px;
+}
+.navbar-nav li
+{
+padding:0 10px;
+}
+
+#nav-bar ul li a:hover
+{
+color: #007bff;
+}
+.navbar
+{
+background: #fff;
+}
+.navbar-toggler
+{
+border: none;
+}
+.nav-link
+{
+color: #555;
+font-weight: 600;
+font-size: 16px;
+}
+
+/*--------slider--------*/
+
+#slider
+{
+width: 100%;
+}
+
+.carousel-caption
+{
+top: 50%;
+transform: translateY(-50%);
+bottom: initial;
+}
+
+.carousel-caption h5
+{
+color: Violet;
+font-size: 42px;
+}
+/*------About-----------*/
+
+
+#about
+{
+padding-top: 50px;
+padding-bottom: 50px;
+color: #555;
+}
+#about .btn
+{
+margin-top: 20px;
+margin-bottom: 30px;
+}
+.about-content
+{
+padding-top: 20px;
+}
+
+.silky 
+{
+margin-bottom: 6px;
+font-weight: 600;
+}
+.progress-bar
+{
+border-radius: 20px;
+}
+.progress
+{
+border-radius: 20px;
+margin-bottom: 20px;
+}
+
+/*------FollowUs----*/
+
+#FollowUs
+{
+background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(img/download4.jpg);
+
+background-position: center;
+color: #efefef;
+background-attachment:fixed;
+padding-top: 10px;
+padding-bottom: 30px;
+}
+.imgcommon{
+font: right;
+font-size: 40px;
+width: 40px;
+
+padding-top: 30px;
+
+
+
+}
+
+.common
+{
+color: white;
+font-size: 40px;
+}

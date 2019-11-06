@@ -1,0 +1,387 @@
+<html>
+<head>
+<title>EntryPage</title>
+<link rel="shortcut icon" href="img/logo1.ico">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js""></script>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+  padding: 20px;
+  font-family: Arial;
+}
+.column men
+{
+  width: 100%;
+    height: 150px;
+    background-color: #ff0000;
+    
+    overflow: visible;
+    white-space:nowrap;
+}
+.column men .slide
+{
+    display: inline-block;
+}    
+
+
+
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row {
+  margin: 10px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  display: none; /* Hide all elements by default */
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<!-- MAIN (Center website) -->
+<section id="entry">
+<div class="main">
+
+<h1>Happy To See You</h1>
+<hr>
+
+<h2></h2>
+
+<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')">All </button>
+  <button class="btn" onclick="filterSelection('men')">Men</button>
+  <button class="btn" onclick="filterSelection('women')">Women</button>
+  <button class="btn" onclick="filterSelection('selected')">SportsWear</button>
+</div>
+
+<!-- Portfolio Gallery Grid -->
+<div class="container">
+<div class="row">
+  <div class="column men">
+    <div class="content">
+      <img src="img/men1.jpg" style="width:100%">
+      <h4>Jacket</h4>
+      <p>Rs: 5000</p>
+    </div>
+  </div>
+  <div class="column men">
+    <div class="content">
+    <img src="img/men2.jpg" style="width:100%">
+      <h4> Plaid Cloth Jacket</h4>
+      <p>10000</p>
+    </div>
+  </div>
+  <div class="column men">
+    <div class="content">
+    <img src="img/men3.jpg" style="width:100%">
+      <h4>Long Jacket</h4>
+      <p>8000</p>
+    </div>
+  </div>
+  
+  <div class="column men">
+    <div class="content">
+      <img src="img/men4.jpg" style="width:100%">
+      <h4>Casual Shirt</h4>
+      <p>2000</p>
+    </div>
+  </div>
+  <div class="column men">
+    <div class="content">
+    <img src="img/men5.jpg" style="width:100%">
+      <h4>Plain Shirt</h4>
+      <p>1500</p>
+    </div>
+  </div>
+  <div class="column men">
+    <div class="content">
+    <img src="img/men6.jpg" style="width:100%">
+      <h4>Checks Shirt</h4>
+      <p>1200</p>
+    </div>
+  </div>
+
+  <div class="column men">
+    <div class="content">
+      <img src="img/men7.jpg" style="width:100%">
+      <h4>Hooded Grey T-Shirt</h4>
+      <p>1800</p>
+    </div>
+  </div>
+  <div class="column men">
+    <div class="content">
+    <img src="img/men8.jpg" style="width:100%">
+      <h4>Polo Blue T-Shirt</h4>
+      <p>2000</p>
+    </div>
+  </div>
+  <div class="column men">
+    <div class="content">
+    <img src="img/men9.jpg" style="width:100%">
+      <h4>Fashion Sweater</h4>
+      <p>2500</p>
+    </div>
+  </div>
+</div>
+<!-- END GRID -->
+
+<div class="row">
+<div class="column women">
+    <div class="content">
+      <img src="img/download8.jpg" style="width:100%">
+      <h4>gray turtle-neck top </h4>
+      <p>Rs: 5000</p>
+    </div>
+  </div>
+  <div class="column women">
+    <div class="content">
+    <img src="img/download10.jpg" style="width:100%">
+      <h4> Blue Dress </h4>
+      <p>10000</p>
+    </div>
+  </div>
+  <div class="column women">
+    <div class="content">
+    <img src="img/download11.jpg" style="width:100%">
+      <h4>Black Cotton Top</h4>
+      <p>8000</p>
+    </div>
+  </div>
+  
+  <div class="column women">
+    <div class="content">
+      <img src="img/download12.jpg" style="width:100%">
+      <h4>Pink Long T-shirts</h4>
+      <p>2000</p>
+    </div>
+  </div>
+  <div class="column women">
+    <div class="content">
+    <img src="img/download13.jpg" style="width:100%">
+      <h4>Half Sleeves</h4>
+      <p>1500</p>
+    </div>
+  </div>
+  <div class="column women">
+    <div class="content">
+    <img src="img/download14.jpg" style="width:100%">
+      <h4>Slogan Print T-shirt</h4>
+    
+      <p>1200</p>
+    </div>
+  </div>
+
+  <div class="column women">
+    <div class="content">
+      <img src="img/men7.jpg" style="width:100%">
+      <h4>Hooded Grey T-Shirt</h4>
+      <p>1800</p>
+    </div>
+  </div>
+  <div class="column women">
+    <div class="content">
+    <img src="img/men8.jpg" style="width:100%">
+      <h4>Polo Blue T-Shirt</h4>
+      <p>2000</p>
+    </div>
+  </div>
+  <div class="column women">
+    <div class="content">
+    <img src="img/men9.jpg" style="width:100%">
+      <h4>Fashion Sweater</h4>
+      <p>2500</p>
+    </div>
+  </div>
+</div>
+<!-- END GRID -->
+
+<div class="row">
+<div class="column selected">
+    <div class="content">
+      <img src="img/men1.jpg" style="width:100%">
+      <h4>Jacket</h4>
+      <p>Rs: 5000</p>
+    </div>
+  </div>
+  <div class="column selected">
+    <div class="content">
+    <img src="img/men2.jpg" style="width:100%">
+      <h4> Plaid Cloth Jacket</h4>
+      <p>10000</p>
+    </div>
+  </div>
+  <div class="column selected">
+    <div class="content">
+    <img src="img/men3.jpg" style="width:100%">
+      <h4>Long Jacket</h4>
+      <p>8000</p>
+    </div>
+  </div>
+  
+  <div class="columnselected">
+    <div class="content">
+      <img src="img/men4.jpg" style="width:100%">
+      <h4>Casual Shirt</h4>
+      <p>2000</p>
+    </div>
+  </div>
+  <div class="column selected">
+    <div class="content">
+    <img src="img/men5.jpg" style="width:100%">
+      <h4>Plain Shirt</h4>
+      <p>1500</p>
+    </div>
+  </div>
+  <div class="column selected">
+    <div class="content">
+    <img src="img/men6.jpg" style="width:100%">
+      <h4>Checks Shirt</h4>
+      <p>1200</p>
+    </div>
+  </div>
+
+  <div class="column selected">
+    <div class="content">
+      <img src="img/men7.jpg" style="width:100%">
+      <h4>Hooded Grey T-Shirt</h4>
+      <p>1800</p>
+    </div>
+  </div>
+  <div class="column selected">
+    <div class="content">
+    <img src="img/men8.jpg" style="width:100%">
+      <h4>Polo Blue T-Shirt</h4>
+      <p>2000</p>
+    </div>
+  </div>
+  <div class="column selected">
+    <div class="content">
+    <img src="img/men9.jpg" style="width:100%">
+      <h4>Fashion Sweater</h4>
+      <p>2500</p>
+    </div>
+  </div>
+</div>
+<!--END GRID-->
+</div>
+
+
+<!-- END MAIN -->
+</div>
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) AddClass(x[i], "show");
+  }
+}
+
+function AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+
+
+
+</section>
+
+</body>
+</html>

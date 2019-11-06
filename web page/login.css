@@ -1,0 +1,38 @@
+*{
+margin:0%;
+padding:0%;
+}
+form{
+position: absolute;
+margin:0%;
+top:20%;
+left:10%;
+
+width:350px;
+height: 350px;
+
+color: blue;
+
+}
+body{
+background-image: url("img/login6.png");
+ background-position: center;
+
+}
+
+.container
+{
+position: absolute;
+margin: 0px;
+top:20%;
+text-align: left;
+}
+
+
+
+
+
+
+
+
+

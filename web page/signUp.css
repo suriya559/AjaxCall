@@ -1,0 +1,16 @@
+*
+{
+margin: 0px;
+padding: 0px;
+}
+form {
+position: absolute;
+right: 10%;
+color: blue;
+top:15%;
+}
+body {
+background-image: url("img/download5.jpg"), url("img/animation.png");
+background-repeat: no-repeat, no-repeat;
+background-position: left, right;
+}
